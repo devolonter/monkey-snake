@@ -1,4 +1,4 @@
 MonkeySnake
 =====================
 
-Snake written on [Monkey](http://www.monkeycoder.co.nz/) language
+Very simple Snake Game written on [Monkey](http://www.monkeycoder.co.nz/) language
