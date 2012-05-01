@@ -1,9 +1,5 @@
 Import mojo
 
-#If TARGET <> "html5"
-	Import monkeytools.MonkeyToolsNative
-#End If
-
 Import src.gamefield
 Import src.angelfont
 
@@ -55,7 +51,7 @@ class Game extends App
 	Method OnUpdate()		
 		#If TARGET <> "html5" And TARGET <> "flash"
 			if(KeyHit(KEY_ESCAPE)) Then
-				ExitApp()
+				Error ""
 			End if
 		#End If
 	
@@ -175,6 +171,10 @@ class Game extends App
 	
 	Method OnRender()
 		Cls(120,138,126)
+		
+		SetColor(120,138,126)
+		DrawRect(0, 0, DeviceWidth(), DeviceHeight())
+		SetColor(255,255,255)
 		
 		Self._scores.DrawText(Game.Scores, Game.CELL_SIZE, 0)
 		
